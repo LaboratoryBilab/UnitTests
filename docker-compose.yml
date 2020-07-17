@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  unittestapp:
+    image: "unittestapp:${TAG}"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    build:
+      context: ./
+      dockerfile: UnitTestApp.Dockerfile
+    ports:
+    - 80:80
